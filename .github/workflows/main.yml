@@ -6,7 +6,6 @@ on:
       bucketname:
         description: 'Enter S3 bucketname'
         required: true
-
 jobs:
     create-bucket:
       runs-on: ubuntu-latest
