@@ -7,7 +7,7 @@ on:
         description: 'Enter S3 bucketname'
         required: true
 
-  jobs:
+jobs:
     create-bucket:
       runs-on: ubuntu-latest
       steps:
@@ -18,7 +18,7 @@ on:
           aws-secret-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Create S3 bucket
-         run: |
+        run: |
            aws s3 mb s3://${{ github.event.inputs.bucketname }}
 
             
